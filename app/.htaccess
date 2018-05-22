@@ -1,0 +1,28 @@
+<ifModule mod_headers.c>
+  <FilesMatch "\.(js|css|txt)$">
+    Header set Cache-Control "max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+    Header set Cache-Control "max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+    Header unset Cache-Control
+  </FilesMatch>
+</IfModule>
+
+<IfModule deflate_module>
+	<IfModule filter_module>
+		AddOutputFilterByType DEFLATE text/plain text/html
+		AddOutputFilterByType DEFLATE text/xml application/xml application/xhtml+xml application/xml-dtd
+		AddOutputFilterByType DEFLATE application/rdf+xml application/rss+xml application/atom+xml image/svg+xml
+		AddOutputFilterByType DEFLATE text/css text/javascript application/javascript application/x-javascript
+		AddOutputFilterByType DEFLATE font/otf font/opentype application/font-otf application/x-font-otf
+		AddOutputFilterByType DEFLATE font/ttf font/truetype application/font-ttf application/x-font-ttf
+	</IfModule>
+</IfModule>
+
+ExpiresByType font/truetype "access plus 1 month" 
+ExpiresByType font/opentype "access plus 1 month" 
+ExpiresByType application/x-font-woff "access plus 1 month" 
+ExpiresByType image/svg+xml "access plus 1 month" 
+ExpiresByType application/vnd.ms-fontobject "access plus 1 month" 

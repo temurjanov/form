@@ -1,0 +1,97 @@
+.wrap
+	width: 100vw
+	height: 100vh
+	overflow: hidden
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	align-items: center
+	justify-content: center
+
+.calc
+	display: block
+	width: 370px
+	background-color: $w
+	border-radius: 4px
+	box-shadow: 0 10px 24px rgba($a21, .3)
+
+	&-header
+		display: block
+		background-color: $a21
+		width: 100%
+		height: 140px
+		border-top-left-radius: 4px
+		border-top-right-radius: 4px
+		text-align: right
+		font-size: 60px
+		color: $w
+		padding: 50px 15px 0 10px
+		overflow: hidden
+
+	&-btns
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		flex-wrap: wrap
+		margin: 92px 92px 0 0
+
+		button
+			flex-basis: 33.333%
+			width: 33.333%
+			display: block
+			height: 92px
+
+			&:nth-child(1)
+				background-color:
+
+	&-functions
+		position: absolute
+		top: 140px
+		right: 0
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		width: 92px
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+		&__btn
+			width: 100%
+			height: 92px
+			display: block
+			color: $w
+			font-size: 27px
+
+			&:nth-child(1)
+				background-color: #9156e1
+			&:nth-child(2)
+				background-color: #8d52dd
+			&:nth-child(3)
+				background-color: #894ed9
+			&:nth-child(4)
+				background-color: #8547d9
+
+	&-foot
+
+		&__btns
+			display: -webkit-flex
+			display: -ms-flex
+			display: flex
+
+			button
+				border-bottom-left-radius: 4px
+				border-bottom-right-radius: 4px
+				flex-basis: 50%
+				width: 50%
+				display: block
+				height: 91px
+
+				&.btn-ans
+					background-color: #e62f89
+					color: $w
+					font-size: 35px
+
+button[type="button"]
+	font-size: 22px
+	+reg
